@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini&More - Conveniência e praticidade no seu condomínio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS-configuration.css" /> 
+
+ <style> 
+body.contraste-ativo {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo a {
+  color: #ffff00 !important; /* links em amarelo */
+}
+
+body.contraste-ativo header,
+body.contraste-ativo footer {
+  background-color: #111 !important;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+body.contraste-ativo main section {
+  background-color: #111 !important;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+body.contraste-ativo section, 
+body.contraste-ativo div {         /* aplica o alto contraste aos section e div */
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+</style> 
+
+</head>
+
+<body>
+  
+<header class="top-nav" style="background-color: #d7d6d6;">
+  <div class="nav-container">
+    <div class="logo-text-wrapper">
+      <div class="logo-cell">
+        <img src="images/logo.png" alt="Mini&More" class="logo">
+      </div>
+      <div class="text-cell">
+      <h1>Mini&More</h1>
+      <p>Conveniência e praticidade no seu condomínio</p>
+    </div>
+  </div>
+    <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="nos.html">Start & Story</a>
+    <a href="hortifruti.html">Fresh & Green</a>
+    <a href="alimentos.html">Shelf & Stock</a>
+    <a href="higiene.html">Clean & Care</a>
+    <a href="servicos.html">Order & Delivery</a>
+    <a href="contato.html">Talk & Touch</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <button id="btn-contraste" aria-label="Ativar alto contraste">🌓 Alto Contraste</button>
+
+        <section class="conection">
+      <div id="nos">
+        <h2 class="titulo">Fresh & Green</h2>
+        </div>
+ 
+        <section class="texto">
+        No Fresh & Green, cada item é uma expressão de qualidade e vitalidade. Frutas e verduras selecionadas, com origem rastreável e frescor garantido.
+        </section>
+      
+  <!-- Tabela reestruturada com Bootstrap Cards -->  
+
+<div class="container my-5">
+  <div class="row g-4 justify-content-center">
+    <!-- Produto 1 -->
+    <div class="col-md-6">
+      <div class="card h-100 text-center shadow">
+        <img src="images/laranjas.webp" class="card-img-top" alt="Laranja Valencia Importada Un.">
+        <div class="card-body">
+          <h5 class="card-title">Laranja Valencia Import Un.</h5>
+          <p class="card-text fs-4 fw-bold text-success">R$ 3,28</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="col-md-6">
+      <div class="card h-100 text-center shadow">
+        <img src="images/morango.webp" class="card-img-top" alt="Morango Orgânico Bandeja 250g">
+        <div class="card-body">
+          <h5 class="card-title">Morango Orgânico 250g</h5>
+          <p class="card-text fs-4 fw-bold text-success">R$ 18,99</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="col-md-6">
+      <div class="card h-100 text-center shadow">
+        <img src="images/milho.webp" class="card-img-top" alt="Milho Verde Kg">
+        <div class="card-body">
+          <h5 class="card-title">Milho Verde Kg</h5>
+          <p class="card-text fs-4 fw-bold text-success">R$ 12,99</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produto 4 -->
+    <div class="col-md-6">
+      <div class="card h-100 text-center shadow">
+        <img src="images/tomates.webp" class="card-img-top" alt="Tomate Espanhol Rama Kg">
+        <div class="card-body">
+          <h5 class="card-title">Tomate Espanhol Rama Kg</h5>
+          <p class="card-text fs-4 fw-bold text-success">R$ 14,80</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>     
+
+<p>
+<h1 align="center">
+    <font size="6" color="6B8E23" face="Verdana">
+        Produtos frescos, entrega rápida e atendimento personalizado. 
+        <p>Tudo o que você precisa a poucos passos de casa.</p>
+    </font>
+</h1>
+<br>
+</p>
+
+</section>
+
+</main>
+
+<script>
+    const botaoContraste = document.getElementById("btn-contraste");
+
+  botaoContraste.addEventListener("click", () => {
+    document.body.classList.toggle("contraste-ativo");
+  });
+</script>
+
+</body>
+
+<footer class="footer-nav">
+  <div class="navfooter-container">
+
+  <!-- dados institucionais -->    
+    <nav class="footer-links">
+      <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a>
+      <a href="TermoServico.html" target="_blank">Termos de Serviço</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+  <!-- endereço e direitos autorais -->    
+    <div class="footer-info">
+      <p>4827 Silver Mesa Drive – Henderson, Nevada (NV)</p>
+      <p>&copy; 2025 Mini&More International Trade Company LLC. Todos os direitos reservados.</p>
+      <p>Developed by Simony-Coder Art & Design</p>
+    </div>
+
+  <!-- ícones de redes sociais -->    
+    <div class="footer-social">
+      <a href="https://pt-br.facebook.com/" target="_blank"><img src="images/18.png" alt="Facebook"></a>
+      <a href="https://x.com/" target="_blank"><img src="images/19.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="images/17.png" alt="Instagram"></a>
+    </div>
+
+  </div>
+</footer>
+
+</html>

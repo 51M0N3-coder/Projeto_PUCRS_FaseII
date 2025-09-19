@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini&More - Conveniência e praticidade no seu condomínio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">      
+    <link rel="stylesheet" type="text/css" href="CSS-configuration.css" /> 
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .faixa-entrega {
+      width: 100%;
+      padding: 40px 0;
+      background-color: #fff;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .faixa-entrega.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .entrega-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1200px;
+      margin: auto;
+      align-items: center;
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    .entrega-imagem img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .entrega-texto {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: DarkSlateGray;
+      text-align: justify;
+    }
+
+    .entrega-texto h2 {
+      color: #6B8E23;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn-entrega {
+      display: inline-block;
+      margin-top: 20px;
+      width: 180px;
+      font-size: 1rem;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #6B8E23;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-entrega:hover {
+      background-color: #4e6b1a;
+    }
+
+    @media (max-width: 768px) {
+      .entrega-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .entrega-texto {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      .entrega-imagem img {
+        height: 250px;
+      }
+    }
+
+  @media (max-width: 768px) {
+  .entrega-texto {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .faixa-entrega {
+    padding: 30px 0;
+  }
+}
+
+body.contraste-ativo {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo a {
+  color: #ffff00 !important; /* links em amarelo */
+}
+
+body.contraste-ativo header,
+body.contraste-ativo footer {
+  background-color: #111 !important;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+body.contraste-ativo main section {
+  background-color: #111 !important;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+body.contraste-ativo section, 
+body.contraste-ativo div {         /* aplica o alto contraste aos section e div */
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+  </style>
+
+</head>
+
+<!-- configuração de alinhamento justificado para o texto-->
+<body>
+
+<header class="top-nav" style="background-color: #d7d6d6;">
+  <div class="nav-container">
+    <div class="logo-text-wrapper">
+      <div class="logo-cell">
+        <img src="images/logo.png" alt="Mini&More" class="logo">
+      </div>
+      <div class="text-cell">
+      <h1>Mini&More</h1>
+      <p>Conveniência e praticidade no seu condomínio</p>
+    </div>
+  </div>
+    <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="nos.html">Start & Story</a>
+    <a href="hortifruti.html">Fresh & Green</a>
+    <a href="alimentos.html">Shelf & Stock</a>
+    <a href="higiene.html">Clean & Care</a>
+    <a href="servicos.html">Order & Delivery</a>
+    <a href="contato.html">Talk & Touch</a>
+    </nav>
+  </div>
+</header>
+
+<button id="btn-contraste" aria-label="Ativar alto contraste">🌓 Alto Contraste</button>   
+
+<main>
+
+        <section class="conection">
+      <div id="servicos">
+        <h2 class="titulo">Serviços Exclusivos Mini&More</h2>
+        </div>
+    
+        <section class="texto">
+          Agilidade, segurança e comodidade. Faça seu pedido com facilidade e receba onde e como quiser.
+        Mini&More - conveniência sob medida para o seu estilo de vida.
+        </section>
+
+<!--tabela com figura e texto, formatação das células-->
+
+  <!-- Bloco 1 -->
+  <section class="faixa-entrega">
+    <div class="entrega-grid">
+      <div class="entrega-imagem">
+        <img src="images/store.webp" alt="Delivery I">  <!--todas as imagens dessa seção foram geradas por IA no Canva (recurso Mídia Mágica)-->
+      </div>
+      <div class="entrega-texto">
+        <h2>Cadastro</h2>
+        <p>Ao criar sua conta, você garante acesso a ofertas exclusivas, novidades e vantagens que só os clientes da Mini&More podem ter.</p>        
+        <p>O cadastro é rápido, seguro e essencial para que a gente possa te conhecer melhor e oferecer exatamente o que você ama.</p>
+        <a href="Cadastro.html" class="btn-entrega">Cadastre-se</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloco 2 -->
+  <section class="faixa-entrega">
+    <div class="entrega-grid">
+      <div class="entrega-imagem">
+        <img src="images/16.webp" alt="Delivery II">
+      </div>
+      <div class="entrega-texto">
+        <h2>Order & Pick up</h2>
+        <p>Realize sua compra com comodidade, online ou pelo WhatsApp, e retire seus produtos diretamente em uma de nossas unidades. O serviço de retirada é rápido, seguro e pensado para atender você com eficiência e praticidade.</p>
+        <p><strong>Tudo isso por apenas R$ 40,00 </strong></p>        
+        <a href="retirada.html" target="_blank" class="btn-entrega">Fazer Pedido</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloco 3 -->
+  <section class="faixa-entrega">
+    <div class="entrega-grid">
+      <div class="entrega-imagem">
+        <img src="images/15.webp" alt="Delivery III">
+      </div>
+      <div class="entrega-texto">
+        <h2>Order & Delivery</h2>
+        <p>Realize sua compra online e receba seus produtos com conforto e segurança no endereço de sua preferência. 
+          O serviço de entrega do Mini&More é ágil, confiável e pensado para facilitar o seu dia a dia. A partir de R$ 60,00.</p>
+        <p><strong>Formas de Pagamento:</strong> cartões, Pix e app.</p>
+        <a href="Delivery.html" target="_blank" class="btn-entrega">Agendar Entrega</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloco 4 -->
+  <section class="faixa-entrega">
+    <div class="entrega-grid">
+      <div class="entrega-imagem">
+        <img src="images/14.webp" alt="Delivery IV">
+      </div>
+      <div class="entrega-texto">
+        <h2>Horário de Funcionamento</h2>
+        <p>Todos os dias, das 7h às 22h, inclusive feriados.</p>
+        <p><strong>Faça seu pedido também pelo WhatsApp:</strong></p><p>(11) 12345-6789</p>
+        <p>Mini&More é mais do que um minimercado, é o seu ponto de apoio diário com exclusividade.</p>
+        <a href="https://www.whatsapp.com" target="_blank" class="btn-entrega">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+<p>
+<h1 align="center">
+    <font size="6" color="6B8E23" face="Verdana">
+        Produtos frescos, entrega rápida e atendimento personalizado. 
+        <p>Tudo o que você precisa a poucos passos de casa.</p>
+    </font>
+</h1>
+<br>
+</p>
+
+</section>
+
+</main>
+
+  <!-- JS para animação ao rolar -->
+  <script>
+    const faixas = document.querySelectorAll('.faixa-entrega');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faixas.forEach(faixa => observer.observe(faixa));
+
+  const botaoContraste = document.getElementById("btn-contraste");
+
+  botaoContraste.addEventListener("click", () => {
+    document.body.classList.toggle("contraste-ativo");
+  });
+</script>
+
+</body>
+
+<footer>
+
+<footer class="footer-nav">
+  <div class="navfooter-container">
+
+  <!-- dados institucionais -->    
+    <nav class="footer-links">
+      <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a>
+      <a href="TermoServico.html" target="_blank">Termos de Serviço</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+  <!-- endereço e direitos autorais -->    
+    <div class="footer-info">
+      <p>4827 Silver Mesa Drive – Henderson, Nevada (NV)</p>
+      <p>&copy; 2025 Mini&More International Trade Company LLC. Todos os direitos reservados.</p>
+      <p>Developed by Simony-Coder Art & Design</p>
+    </div>
+
+  <!-- ícones de redes sociais -->    
+    <div class="footer-social">
+      <a href="https://pt-br.facebook.com/" target="_blank"><img src="images/18.png" alt="Facebook"></a>
+      <a href="https://x.com/" target="_blank"><img src="images/19.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="images/17.png" alt="Instagram"></a>
+    </div>
+
+  </div>
+</footer>
+
+</html>

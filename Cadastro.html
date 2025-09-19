@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini&More - Conveniência e praticidade no seu condomínio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">      
+    <link rel="stylesheet" type="text/css" href="CSS-configuration.css"/> 
+    
+<style>
+
+.fieldset-estilizado {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  margin: 40px 0;
+  font-family: Verdana, sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.fieldset-estilizado,
+.card {
+  margin-bottom: 40px;
+}
+
+body.contraste-ativo {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo a {
+  color: #ffff00 !important; /* links em amarelo */
+}
+
+body.contraste-ativo header,
+body.contraste-ativo footer {
+  background-color: #111 !important;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+body.contraste-ativo main section {
+  background-color: #111 !important;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+body.contraste-ativo section, 
+body.contraste-ativo div {         /* aplica o alto contraste aos section e div */
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo .card,
+body.contraste-ativo .fieldset-estilizado {
+  background-color: #111 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  box-shadow: none !important;
+}
+
+/* Títulos e rótulos */
+body.contraste-ativo .fieldset-estilizado legend h4,
+body.contraste-ativo .fieldset-estilizado label {
+  color: #fff !important;
+}
+
+/* Campos de entrada e seleção */
+body.contraste-ativo input,
+body.contraste-ativo select,
+body.contraste-ativo textarea {
+  background-color: #222 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+/* Placeholders */
+body.contraste-ativo input::placeholder {
+  color: #ccc !important;
+}
+
+/* Botões padrão Bootstrap */
+body.contraste-ativo .btn-primary {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+  box-shadow: none !important;
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="top-nav" style="background-color: #d7d6d6;">
+  <div class="nav-container">
+    <div class="logo-text-wrapper">
+      <div class="logo-cell">
+        <img src="images/logo.png" alt="Mini&More" class="logo">
+      </div>
+      <div class="text-cell">
+      <h1>Mini&More</h1>
+      <p>Conveniência e praticidade no seu condomínio</p>
+    </div>
+  </div>
+    <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="nos.html">Start & Story</a>
+    <a href="hortifruti.html">Fresh & Green</a>
+    <a href="alimentos.html">Shelf & Stock</a>
+    <a href="higiene.html">Clean & Care</a>
+    <a href="servicos.html">Order & Delivery</a>
+    <a href="contato.html">Talk & Touch</a>
+    </nav>
+  </div>
+</header>
+
+<button id="btn-contraste" aria-label="Ativar alto contraste">🌓 Alto Contraste</button>   
+
+<form action ="https://formsubmit.co/simony.science@gmail.com" method ="POST">
+
+<fieldset class="fieldset-estilizado">
+  <legend>Informações Pessoais</legend>
+
+  <label for="nome">Nome completo *</label>
+  <input type="text" size="54px" id="nome" required placeholder="Digite o nome completo" autofocus /> &emsp;
+
+  <label for="CPF">CPF *</label>
+  <input type="number" id="CPF" required placeholder="XXX.XXX.XXX-XX" /> &emsp;
+
+  <label for="RG">RG *</label>
+  <input type="number" id="RG" required placeholder="XX.XXX.XXX-X" /><br><br>
+
+  <label for="nascimento">Data de nascimento</label>
+  <input type="date" id="nascimento" /> &emsp;
+
+  <label for="telefone">Telefone *</label>
+  <input type="tel" id="telefone" required placeholder="(XX) XXXXX-XXXX" /> &emsp;
+
+  <label for="email">E-mail</label>
+  <input type="email" size="54px" id="email" /><br><br>
+
+  <label for="genero">Gênero:</label>
+
+  <input type="radio" id="op1" name="opcao_escolhida" value="opcao1" />
+  <label for="op1">Masculino</label>
+
+  <input type="radio" id="op2" name="opcao_escolhida" value="opcao2" />
+  <label for="op2">Feminino</label>
+
+  <input type="radio" id="op3" name="opcao_escolhida" value="opcao3" />
+  <label for="op3">Outro.</label>
+
+  <label for="qual">Qual?</label>
+  <input type="text" size="29px" id="qual" />
+</fieldset>
+
+<fieldset class="fieldset-estilizado">
+        <legend>Endereço</legend>
+
+        <label for="rua">Rua</label>
+        <input type="text" size="54px" id="rua" required placeholder="Digite o nome da Rua / Avenida"/> &emsp;
+
+        <label for="Numero">Número</label>
+        <input type="number" id="numero" class="campo-curto"/> &emsp;
+
+        <label for="Complemento">Complemento</label>
+        <input type="text" size="37px" id="complemento"/><br><br>
+
+        <label for="bairro">Bairro</label>
+        <input type="text" size="45px" id="bairro"/> &emsp;
+
+        <label for="cidade">Cidade</label>
+        <input type="text" size="45px" id="cidade"/> &emsp;
+        
+        <select name="Estado">
+        <option value="estado">Estado</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option> 
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>               
+        </select> &emsp;
+</fieldset>
+</form>
+
+<div class="container my-5">
+  <div class="row g-4 justify-content-center align-items-stretch">
+    
+    <!-- Card 1: Login -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <fieldset class="fieldset-estilizado">
+            <legend><h4>Faça seu Login</h4></legend>
+            <label for="email">Seu e-mail*</label>
+            <input type="email" id="email-login" class="form-control mb-2" />
+
+            <label for="password">Sua senha*</label>
+            <input type="password" id="password" class="form-control mb-2" />
+
+            <div class="form-check mb-2">
+              <input type="checkbox" class="form-check-input" id="lembrar" />
+              <label class="form-check-label" for="lembrar">Lembrar-me</label>
+            </div>
+
+            <button class="btn btn-primary w-100">Entrar</button>
+
+            <p class="mt-3">
+              Esqueceu sua senha?
+              <a href="https://campusdigital.pucrs.br/home">Clique aqui</a>
+            </p>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Avaliação -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <fieldset class="fieldset-estilizado">
+            <legend><h4>Avaliação</h4></legend>
+            <label for="satisfacao">Como você avalia sua experiência de cadastro?</label>
+            <input type="range" id="satisfacao" min="1" max="5" class="form-range mb-3" />
+
+            <br><br><label>Preferências de contato:</label>
+            <div class="form-check">
+              <br><input type="checkbox" id="cont1" name="cont1" value="telefone" class="form-check-input">
+              <label for="cont1" class="form-check-label">Telefone</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="cont2" name="cont2" value="email" class="form-check-input">
+              <label for="cont2" class="form-check-label">E-mail</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="cont3" name="cont3" value="sms" class="form-check-input">
+              <label for="cont3" class="form-check-label">SMS</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="cont4" name="cont4" value="whatsapp" class="form-check-input">
+              <label for="cont4" class="form-check-label">WhatsApp</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="cont5" name="cont5" value="web" class="form-check-input">
+              <label for="cont5" class="form-check-label">Via App ou Web</label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fieldset LGPD -->
+    <div class="col-md-12">
+      <fieldset class="fieldset-estilizado">
+        <legend><h4>Proteção de Dados</h4></legend>
+        <p>
+           A <strong>Mini&More</strong> é regida pela <strong>Lei Geral de Proteção de Dados (LGPD)</strong>, que garante que seus dados pessoais (como nome, CPF e endereço) sejam tratados com segurança, transparência e respeito.
+          Você tem o direito de acessar, corrigir ou excluir suas informações a qualquer momento.
+        </p>
+      </fieldset>
+    </div>
+
+    <!-- Botão Final -->
+    <div class="col-md-12 text-center">
+      <button type="submit" class="btn btn-primary px-5 py-2">Enviar</button>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer-nav">
+  <div class="navfooter-container">
+
+  <!-- dados institucionais -->    
+    <nav class="footer-links">
+      <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a>
+      <a href="TermoServico.html" target="_blank">Termos de Serviço</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+  <!-- endereço e direitos autorais -->    
+    <div class="footer-info">
+      <p>4827 Silver Mesa Drive – Henderson, Nevada (NV)</p>
+      <p>&copy; 2025 Mini&More International Trade Company LLC. Todos os direitos reservados.</p>
+      <p>Developed by Simony-Coder Art & Design</p>
+    </div>
+
+  <!-- ícones de redes sociais -->    
+    <div class="footer-social">
+      <a href="https://pt-br.facebook.com/" target="_blank"><img src="images/18.png" alt="Facebook"></a>
+      <a href="https://x.com/" target="_blank"><img src="images/19.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="images/17.png" alt="Instagram"></a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const botaoContraste = document.getElementById("btn-contraste");
+
+  botaoContraste.addEventListener("click", () => {
+    document.body.classList.toggle("contraste-ativo");
+  });
+</script>
+
+</body>
+
+</html>

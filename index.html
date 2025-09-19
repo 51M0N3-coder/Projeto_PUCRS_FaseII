@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini&More - Conveniência e praticidade no seu condomínio</title>
+    <link rel="stylesheet" type="text/css" href="CSS-configuration.css" /> <!-- chama o arquivo CSS criado para centralizar as configurações -->
+   <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> desabilitei pq desconfigurou o carousel-->
+
+<style> 
+body.contraste-ativo {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo a {
+  color: #ffff00 !important; /* links em amarelo */
+}
+
+body.contraste-ativo header,
+body.contraste-ativo footer {
+  background-color: #111 !important;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+body.contraste-ativo main section {
+  background-color: #111 !important;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+body.contraste-ativo section, 
+body.contraste-ativo div {         /* aplica o alto contraste aos section e div */
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+</style>  
+
+</head>
+
+<!-- título e logotipo do mini-mercado-->
+<body>
+
+<header class="top-nav" style="background-color: #d7d6d6;">
+  <div class="nav-container">
+    <div class="logo-text-wrapper">
+      <div class="logo-cell">
+        <img src="images/logo.png" alt="Mini&More" class="logo">
+      </div>
+      <div class="text-cell">
+      <h1>Mini&More</h1>
+      <p>Conveniência e praticidade no seu condomínio</p>
+    </div>
+  </div>
+    <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="nos.html">Start & Story</a>
+    <a href="hortifruti.html">Fresh & Green</a>
+    <a href="alimentos.html">Shelf & Stock</a>
+    <a href="higiene.html">Clean & Care</a>
+    <a href="servicos.html">Order & Delivery</a>
+    <a href="contato.html">Talk & Touch</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="carousel-wrapper"> <!--as imagens e vídeos do carousel foram comprimidas para se adequarem ao limite de carregamento do GuitHub-->
+<div class="carousel">  <!--carousel de vídeos e imagens royalty free - Pixabay, Pexels e Unsplash free stock photos -->
+  <div class="carousel-track">
+    <div class="carousel-slide active">     
+      <video muted playsinline>     
+        <source src="videos/Limao.webm" type="video/webm"> <!--otimização no tamanho dos vídeos e conversão para a extensão webM através do app handBrake-->
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <div class="carousel-slide">            
+      <img src="images/cestas.webp" alt="cestas"> <!--otimização no tamanho das imagens e conversão para a extensão webP através do app Squoosh-->
+    </div>
+    <div class="carousel-slide">
+      <video controls>
+        <source src="videos/Coquetel.webm" type="video/webm">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/variedade.webp" alt="variedade"> <!--inclusão do "alt" disponibiliza descrições textuais para pessoas com deficiência visual que utilizam leitores de tela-->
+    </div>
+    <div class="carousel-slide">
+      <video controls>
+        <source src="videos/Picnic.webm" type="video/webm">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/caviar.webp" alt="caviar">
+    </div>
+    <div class="carousel-slide">
+      <video controls>
+        <source src="videos/Mirtilo.webm" type="video/webm">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/cheese.webp" alt="pimentoes">
+    </div>
+    <div class="carousel-slide">
+      <video controls>
+        <source src="videos/Croissant.webm" type="video/webm">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <div class="carousel-slide">
+      <img src="images/frutas.webp" alt="frutas">
+    </div>
+    <div class="carousel-slide">
+      <video controls>
+        <source src="videos/Bowl.webm" type="video/webm">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>                
+  
+  <button class="carousel-btn prev">❮</button> <!--botões de voltar e avançar as imagens / videos-->
+  <button class="carousel-btn next">❯</button>
+</section> 
+  <div class="carousel-indicators">   <!-- "pontos" na parte inferior do vídeo para seleção de reprodução aleatória -->
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+ </div>
+
+ <button id="btn-contraste" aria-label="Ativar alto contraste">🌓 Alto Contraste</button> <!--recurso de alto contraste para pessoas com com baixa visão ou outras deficiências visuais-->
+
+    <br>
+    <br>
+
+<section class="descricao-mercado">
+  <div class="texto-centralizado">
+<p>
+Nossa seleção inclui produtos premium, itens frescos e essenciais cuidadosamente escolhidos para garantir conveniência sem 
+abrir mão do bom gosto. Desde ingredientes gourmet até soluções rápidas para sua rotina, você encontra tudo em um ambiente 
+acolhedor e exclusivo.
+</p> 
+
+<p>Mais do que um mercado, somos um ponto de encontro entre praticidade e estilo de vida. Oferecemos atendimento personalizado, 
+    garantia de qualidade e um espaço feito para facilitar sua vida — sem precisar sair do condomínio.
+</p>
+</div>
+
+<!-- Tabela de imagens com duas colunas e duas linhas -->
+    <table>
+      <tr>
+        <td>
+          <img src="images/11.webp" alt="Fachada I" width="650" height="650">  <!--todas as imagens dessa tabela foram geradas por IA no Canva (recurso Mídia Mágica)-->
+        </td>
+        <td>
+          <img src="images/4.webp" alt="Imagem interna I" width="650" height="650">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <img src="images/10.webp" alt="Fachada II" width="650" height="650">
+        </td>
+        <td>
+          <img src="images/3.webp" alt="Imagem interna II" width="650" height="650">          
+        </td>
+      </tr>  
+    </table>
+
+<p>
+<h1 align="center">
+    <font size="6" color="6B8E23" face="Verdana">
+        Produtos frescos, entrega rápida e atendimento personalizado. 
+        <p>Tudo o que você precisa a poucos passos de casa.</p>
+    </font>
+</h1>
+<br>
+</p>
+</section>
+
+<br>
+
+<script>
+let currentIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+    dots[i]?.classList.toggle('active', i === index);
+  });
+
+  const currentSlide = slides[index];
+  const video = currentSlide.querySelector('video');
+
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+    video.muted = true;
+
+    // Aguarda o vídeo estar pronto
+    video.oncanplay = () => {
+      video.play();
+    };
+
+    // Avança somente quando o vídeo terminar
+    video.onended = () => {
+      nextSlide();
+    };
+  } else {
+    // Se for imagem, avança após 5 segundos
+    setTimeout(() => {
+      nextSlide();
+    }, 5000);
+  }
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+}
+
+// Botões
+document.querySelector('.next').addEventListener('click', () => {
+  nextSlide();
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  prevSlide();
+});
+
+// Dots
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    currentIndex = i;
+    showSlide(currentIndex);
+  });
+});
+
+// Swipe (mobile)
+let startX = 0;
+document.querySelector('.carousel').addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+document.querySelector('.carousel').addEventListener('touchend', e => {
+  let endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) {
+    nextSlide();
+  } else if (endX - startX > 50) {
+    prevSlide();
+  }
+});
+
+// Inicializa
+showSlide(currentIndex);
+
+  const botaoContraste = document.getElementById("btn-contraste");
+
+  botaoContraste.addEventListener("click", () => {
+    document.body.classList.toggle("contraste-ativo");
+  });
+</script>
+
+  </main>
+
+</body>
+
+<footer class="footer-nav">
+  <div class="navfooter-container">
+
+  <!-- dados institucionais -->    
+    <nav class="footer-links">
+      <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a>
+      <a href="TermoServico.html" target="_blank">Termos de Serviço</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+  <!-- endereço e direitos autorais -->    
+    <div class="footer-info">
+      <p>4827 Silver Mesa Drive – Henderson, Nevada (NV)</p>
+      <p>&copy; 2025 Mini&More International Trade Company LLC. Todos os direitos reservados.</p>
+      <p>Developed by Simony-Coder Art & Design</p>
+    </div>
+
+  <!-- ícones de redes sociais -->    
+    <div class="footer-social">
+      <a href="https://pt-br.facebook.com/" target="_blank"><img src="images/18.png" alt="Facebook"></a>
+      <a href="https://x.com/" target="_blank"><img src="images/19.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="images/17.png" alt="Instagram"></a>
+    </div>
+
+  </div>
+</footer>
+
+</html>
+

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini&More - Conveniência e praticidade no seu condomínio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="CSS-configuration.css" /> 
+
+<style>
+
+body {
+  background-image: url('images/3.webp');  /* imagem de fundo */
+  background-size: cover;         /* cobre toda a tela */
+  background-position: center;    /* centraliza a imagem */
+  background-repeat: no-repeat;   /* evita repetição */
+}
+
+
+  .texto-contato {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: DarkSlateGray;
+  font-family: Verdana, sans-serif;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+body.contraste-ativo {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo a {
+  color: #ffff00 !important; /* links em amarelo */
+}
+
+body.contraste-ativo header,
+body.contraste-ativo footer {
+  background-color: #111 !important;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+body.contraste-ativo main section {
+  background-color: #111 !important;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+body.contraste-ativo section, 
+body.contraste-ativo div {         /* aplica o alto contraste aos section e div */
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+/* 1. Alto contraste no main inteiro */
+body.contraste-ativo main.texto-centralizado {
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+/* 2. Alto contraste no box do formulário */
+body.contraste-ativo .fieldset-estilizado {
+  background-color: #111 !important;
+  border-color: #fff !important;
+  box-shadow: none !important;    /* remove sombra clara */
+  color: #fff !important;
+}
+
+/* 3. Inputs e textarea em alto contraste */
+body.contraste-ativo .form-control,
+body.contraste-ativo input,
+body.contraste-ativo textarea {
+  background-color: #222 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="top-nav" style="background-color: #d7d6d6;">
+  <div class="nav-container">
+    <div class="logo-text-wrapper">
+      <div class="logo-cell">
+        <img src="images/logo.png" alt="Mini&More" class="logo">
+      </div>
+      <div class="text-cell">
+      <h1>Mini&More</h1>
+      <p>Conveniência e praticidade no seu condomínio</p>
+    </div>
+  </div>
+    <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="nos.html">Start & Story</a>
+    <a href="hortifruti.html">Fresh & Green</a>
+    <a href="alimentos.html">Shelf & Stock</a>
+    <a href="higiene.html">Clean & Care</a>
+    <a href="servicos.html">Order & Delivery</a>
+    <a href="contato.html">Talk & Touch</a>
+    </nav>
+  </div>
+</header>
+<br><br>
+
+<button id="btn-contraste" aria-label="Ativar alto contraste">🌓 Alto Contraste</button>   
+
+  <main class="texto-centralizado">
+    <h2 class="titulo">Fale Conosco</h2>
+    <p  class="texto-contato">Estamos sempre prontos para ouvir você. Seja para tirar dúvidas, enviar sugestões, relatar problemas ou compartilhar ideias, 
+      sua mensagem é muito importante para nós. Ao preencher o formulário, você nos ajuda a entender melhor sua necessidade. 
+      Nossa equipe está preparada para oferecer uma resposta rápida e eficiente. A Mini&More acredita no diálogo transparente e na construção de soluções que realmente 
+      fazem a diferença no seu dia a dia.</p>
+
+    <form action="https://formsubmit.co/simony.science@gmail.com" method="POST">
+      <fieldset class="fieldset-estilizado">
+        <legend>Mensagem</legend>
+
+        <label for="nome">Nome completo *</label><br>
+        <input type="text" id="nome" name="nome" class="form-control w-100" required placeholder="Seu nome completo" style="height: 60px;"><br>
+
+        <label for="email">E-mail *</label><br>
+        <input type="email" id="email" name="email" class="form-control w-100" required placeholder="seu@email.com" style="height: 60px;"><br>
+
+        <label for="assunto">Assunto</label><br>
+        <input type="text" size="110px" id="assunto" name="assunto" class="form-control w-100" placeholder="Sobre o que deseja falar?" style="height: 60px;"><br>
+
+        <label for="mensagem">Mensagem *</label><br>
+        <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Escreva sua mensagem aqui..." style="width:100%;"></textarea><br><br>
+
+        <button type="submit" class="btn btn-primary w-100" style="height: 60px;">Enviar</button>
+      </fieldset>
+
+<script>
+    const botaoContraste = document.getElementById("btn-contraste");
+
+  botaoContraste.addEventListener("click", () => {
+    document.body.classList.toggle("contraste-ativo");
+  });
+</script>
+
+  </main>
+  
+    </form>
+
+
+  <!-- Rodapé -->
+<footer>
+
+<footer class="footer-nav">
+  <div class="navfooter-container">
+
+  <!-- dados institucionais -->    
+    <nav class="footer-links">
+      <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a>
+      <a href="TermoServico.html" target="_blank">Termos de Serviço</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+  <!-- endereço e direitos autorais -->    
+    <div class="footer-info">
+      <p>4827 Silver Mesa Drive – Henderson, Nevada (NV)</p>
+      <p>&copy; 2025 Mini&More International Trade Company LLC. Todos os direitos reservados.</p>
+      <p>Developed by Simony-Coder Art & Design</p>
+    </div>
+
+  <!-- ícones de redes sociais -->    
+    <div class="footer-social">
+      <a href="https://pt-br.facebook.com/" target="_blank"><img src="images/18.png" alt="Facebook"></a>
+      <a href="https://x.com/" target="_blank"><img src="images/19.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="images/17.png" alt="Instagram"></a>
+    </div>
+
+  </div>
+</footer>
+
+</html>
